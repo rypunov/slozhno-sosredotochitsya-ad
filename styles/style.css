@@ -3,3 +3,111 @@
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
+
+.header {
+  display: grid;
+  background-image: url(../images/cover-image-dark.png);
+  padding: 10px;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--text-and-background-color);
+  border-left: 1px solid var(--text-and-background-color);
+  margin: 10px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--text-and-background-color);
+  border-right: 1px solid var(--text-and-background-color);
+  margin: 10px;
+}
+
+.bulb {
+  justify-self: end;
+  margin-bottom: 39px;
+}
+
+.bulb_text {
+  display: inline-block;
+  position: relative;
+  padding-right: 28px; /*Расстояние от текста до уголка*/
+  font-family: var(--font-family-main);;
+  text-transform: uppercase;
+  font-size: var(--font-size-text);
+  line-height: 25px;
+  color: var(--text-and-background-color);
+}
+
+.bulb_text::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% - 18px);
+  width: 9px;
+  height: 9px;
+  background: var(--text-and-background-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--text-and-background-color);
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.header__theme-menu-button {
+  font-family: var(--font-family-main);;
+  font-size: var(--font-size-text);
+  line-height: 18px;
+  color: var(--text-and-background-color);
+  background: none;
+  border: none;
+  text-transform: lowercase;
+  margin-bottom: 10px;
+  padding: 0 13px;
+  height: 26px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--text-and-background-color);
+}
+
+.header_title {
+  font-family: var(--font-family-main);;
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: #DB00FF;
+  text-shadow: 4px 4px 0 var(--text-and-background-color);
+  margin-top: 65px; /*По Perfect Pixel лучше подходит 58px*/
+  margin-bottom: 55px;  
+}
+
+.header_text {
+  margin-bottom: 41px;
+}
+
+.title-decor {
+  font-family: var(--font-family-main);;
+  font-weight: bold;
+  font-size: var(--font-size-text);
+  line-height: 23.4px;
+  color: #000028;
+  background-color: var(--text-and-background-color);
+}

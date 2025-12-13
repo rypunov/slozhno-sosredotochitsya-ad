@@ -2,14 +2,17 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-color: #000028;
+  background-color: var(--page-bg-color);
 }
 
 .header {
   display: grid;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--header-bg-img);
   padding: 10px;
   margin-bottom: 40px;
+  background-size: cover;       /* растягивает на весь блок */
+  background-position: center;  /* центрирует */
+  background-repeat: no-repeat; /* не повторяет */
 }
 
 .decorated-zone {
@@ -23,8 +26,8 @@
   left: 0;
   width: 25px;
   height: 25px;
-  border-bottom: 1px solid var(--text-and-background-color);
-  border-left: 1px solid var(--text-and-background-color);
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
   margin: 10px;
 }
 
@@ -35,8 +38,8 @@
   right: 0;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--text-and-background-color);
-  border-right: 1px solid var(--text-and-background-color);
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
   margin: 10px;
 }
 
@@ -53,7 +56,7 @@
   text-transform: uppercase;
   font-size: var(--font-size-text);
   line-height: 25px;
-  color: var(--text-and-background-color);
+  color: var(--accent-color);
 }
 
 .bulb_text::after {
@@ -64,9 +67,9 @@
   left: calc(100% - 18px);
   width: 9px;
   height: 9px;
-  background: var(--text-and-background-color);
+  background: var(--accent-color);
   border-radius: 50%;
-  box-shadow: 0px 0px 4px 2px var(--text-and-background-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
 }
 
 .header__theme-menu {
@@ -77,7 +80,7 @@
   font-family: var(--font-family-main);;
   font-size: var(--font-size-text);
   line-height: 18px;
-  color: var(--text-and-background-color);
+  color: var(--accent-color);
   background: none;
   border: none;
   text-transform: lowercase;
@@ -86,8 +89,21 @@
   height: 26px;
 }
 
+.header__theme-menu-button:hover {
+  border: 1px solid var(--border-button-hower-color);
+}
+
+.header__theme-menu-button:focus {
+  border: none;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.header__theme-menu-button_type_dark {
+  margin-bottom: 0;
+}
+
 .header__theme-menu-button_active {
-  border: 1px solid var(--text-and-background-color);
+  border: 1px solid var(--accent-color);
 }
 
 .header_title {
@@ -95,14 +111,14 @@
   font-weight: bold;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 82.5%;
-  color: #DB00FF;
-  text-shadow: 4px 4px 0 var(--text-and-background-color);
-  margin-top: 65px; /*По Perfect Pixel лучше подходит 58px*/
+  color: var(--title-and-footer-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-top: 68px; /*По макету должно быть 65px*/
   margin-bottom: 55px;  
 }
 
 .header_text {
-  margin-bottom: 41px;
+  margin-bottom: calc(31px + 25px); /*31 (по макету) + 25 (размер уголка)*/
 }
 
 .title-decor {
@@ -111,12 +127,13 @@
   font-size: var(--font-size-text);
   line-height: 23.4px;
   color: #000028;
-  background-color: var(--text-and-background-color);
+  background-color: var(--accent-color);
 }
 
 .main {
   display: grid;
   gap: 50px;
+  margin-bottom: 40px;
 }
 
 .section {
@@ -130,7 +147,7 @@
   font-weight: bold;
   font-size: var(--font-size-text);
   line-height: 23.4px;
-  color: var(--text-and-background-color);
+  color: var(--accent-color);
 }
 
 .article-title {
@@ -141,11 +158,11 @@
   font-family: var(--font-family-main);
   font-size: var(--font-size-text);
   line-height: 23.4px;
-  color: #F1B2CE;
+  color: var(--text-color);
 }
 
 .section-link {
-  text-shadow: 2px 2px 0 var(--text-and-background-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
 }
 
@@ -172,4 +189,21 @@
 .image {
   width: 100%;
   height: 100%;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  /* height: 668px;  */
+}
+
+.footer-title {
+  font-family: var(--font-family-main);;
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 82.5%;
+  color: var(--title-and-footer-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  margin-top: 286px;
+  margin-bottom: 285px;
 }

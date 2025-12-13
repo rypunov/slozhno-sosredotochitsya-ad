@@ -4,7 +4,12 @@
 */
 
 :root {
-    --text-and-background-color: #FF0070;
+    --header-bg-img: url(../images/cover-image-dark.png);
+    --page-bg-color: #000028;
+    --accent-color: #FF0070;
+    --border-button-hower-color: rgba(255, 0, 112, 0.4);
+    --title-and-footer-color: #DB00FF;
     --font-family-main: 'IBM Plex mono', monospace;
     --font-size-text: 18px;
+    --text-color: #F1B2CE;
 } 

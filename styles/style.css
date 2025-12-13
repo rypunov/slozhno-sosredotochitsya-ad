@@ -2,12 +2,14 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-color: #000028;
 }
 
 .header {
   display: grid;
   background-image: url(../images/cover-image-dark.png);
   padding: 10px;
+  margin-bottom: 40px;
 }
 
 .decorated-zone {
@@ -47,7 +49,7 @@
   display: inline-block;
   position: relative;
   padding-right: 28px; /*Расстояние от текста до уголка*/
-  font-family: var(--font-family-main);;
+  font-family: var(--font-family-main);
   text-transform: uppercase;
   font-size: var(--font-size-text);
   line-height: 25px;
@@ -110,4 +112,64 @@
   line-height: 23.4px;
   color: #000028;
   background-color: var(--text-and-background-color);
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.section-title {
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  font-size: var(--font-size-text);
+  line-height: 23.4px;
+  color: var(--text-and-background-color);
+}
+
+.article-title {
+  margin-bottom: 10px;
+}
+
+.article-text {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-text);
+  line-height: 23.4px;
+  color: #F1B2CE;
+}
+
+.section-link {
+  text-shadow: 2px 2px 0 var(--text-and-background-color);
+  text-decoration: none;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+  text-decoration-color: currentColor;
+}
+
+.section-link:focus {
+  outline: 1px solid currentColor;
+  /* outline-offset: 2px; */
+  text-decoration: none;
+}
+.adviсe {
+  font-weight: normal;
+}
+
+.image-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
 }

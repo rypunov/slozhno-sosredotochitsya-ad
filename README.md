@@ -27,7 +27,7 @@
 👉 **[Открыть на GitHub Pages](https://rypunov.github.io/slozhno-sosredotochitsya-ad/)**
 
 ## 🔗 Ссылки
-- [GitHub репозиторий](https://github.com/rypunov/slozhno-sosredotochitsya-ad)
+https://github.com/rypunov/slozhno-sosredotochitsya-ad
 
 ---
 *Проект выполнен в рамках учебной программы. Все материалы взяты из открытых источников.*

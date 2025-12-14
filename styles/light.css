@@ -39,4 +39,8 @@
     --border-button-hower-color: rgba(53, 52, 48, 0.4);
     --decorated-zone-border-color: var(--article-text-color);
   }
+
+  .bulb {
+    visibility: hidden;
+  }
 }

@@ -18,5 +18,9 @@
   --title-decor-text-color: #000028;
   --section-title-text-color: var(--accent-color);
   --button-text-color: var(--accent-color);
-    --decorated-zone-border-color: var(--accent-color);
+  --decorated-zone-border-color: var(--accent-color);
+}
+
+.theme-dark .bulb {
+  visibility: visible;
 }

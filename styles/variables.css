@@ -11,5 +11,6 @@
     --title-and-footer-color: #DB00FF;
     --font-family-main: 'IBM Plex mono', monospace;
     --font-size-text: 18px;
+    --font-size-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
     --text-color: #F1B2CE;
 } 

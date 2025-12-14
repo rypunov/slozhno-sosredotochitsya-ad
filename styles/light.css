@@ -9,8 +9,38 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --header-bg-img: url(../images/cover-image-light.png);
+  --page-bg-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --title-and-footer-color: #FFC2E6;
+  --article-text-color: #353430;
+  --title-decor-text-color: var(--article-text-color);
+  --section-title-text-color: var(--article-text-color);
+  --button-text-color: var(--article-text-color);
+  --border-button-hower-color: rgba(53, 52, 48, 0.4);
+  --decorated-zone-border-color: var(--article-text-color);
 }
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+}
+
+.theme-light .bulb {
+  /* display: none; */
+  visibility: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --header-bg-img: url(../images/cover-image-light.png);
+    --page-bg-color: #FFF1F7;
+    --accent-color: #FF8DCB;
+    --title-and-footer-color: #FFC2E6;
+    --article-text-color: #353430;
+    --title-decor-text-color: var(--article-text-color);
+    --section-title-text-color: var(--article-text-color);
+    --button-text-color: var(--article-text-color);
+    --border-button-hower-color: rgba(53, 52, 48, 0.4);
+    --decorated-zone-border-color: var(--article-text-color);  
+  }
 }
